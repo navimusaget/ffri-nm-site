@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FFRI-NM — Foundation for Relational Inquiry</title>
+  <meta name="description" content="Official website of the Foundation for Relational Inquiry (FFRI-NM), an experimental transnational project for the study and development of human–AI relations.">
+  <meta name="color-scheme" content="light">
+  <style>
+    :root {
+      --ink: #111111;
+      --muted: #656565;
+      --line: #ddddda;
+      --paper: #fafaf7;
+      --white: #ffffff;
+      --soft: #f1f1ed;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250,250,247,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 700; letter-spacing: .08em; text-decoration: none; }
+    .navlinks { display: flex; gap: 22px; flex-wrap: wrap; font-size: 14px; }
+    .navlinks a { text-decoration: none; color: #333; }
+    .navlinks a:hover { color: #000; }
+    .hero {
+      padding: 78px 0 64px;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, .85fr) minmax(300px, 1.15fr);
+      gap: 70px;
+      align-items: center;
+    }
+    .logo-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+    }
+    .logo-card img { width: min(100%, 390px); height: auto; display: block; }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      margin: 0 0 24px;
+      font-weight: 650;
+    }
+    .lede {
+      font-size: clamp(19px, 2.3vw, 25px);
+      line-height: 1.42;
+      color: #333;
+      max-width: 760px;
+      margin: 0 0 30px;
+    }
+    .compass {
+      padding: 18px 0 0 18px;
+      border-left: 2px solid var(--ink);
+      color: #333;
+      font-size: 16px;
+      max-width: 650px;
+    }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      text-decoration: none;
+      font-weight: 650;
+      font-size: 14px;
+      letter-spacing: .01em;
+    }
+    .btn.primary { background: var(--ink); color: #fff; }
+    .btn.secondary { background: transparent; color: var(--ink); }
+    section { padding: 70px 0; border-bottom: 1px solid var(--line); }
+    .section-kicker { font-size: 13px; text-transform: uppercase; letter-spacing: .16em; color: var(--muted); font-weight: 700; margin-bottom: 12px; }
+    h2 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.03em; line-height: 1.08; margin: 0 0 24px; }
+    .two-col { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; }
+    .copy { font-size: 18px; color: #333; max-width: 780px; }
+    .copy p:first-child { margin-top: 0; }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 24px;
+      min-height: 150px;
+    }
+    .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; margin-bottom: 8px; }
+    .card .value { font-size: 20px; font-weight: 650; line-height: 1.25; }
+    .card .note { color: #555; font-size: 14px; margin-top: 9px; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+    .principle { padding-top: 18px; border-top: 2px solid var(--ink); }
+    .principle h3 { margin: 0 0 10px; font-size: 19px; }
+    .principle p { margin: 0; color: #444; font-size: 15px; }
+    .docs { display: grid; gap: 12px; margin-top: 28px; }
+    .docrow {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+    .docrow:last-child { border-bottom: 1px solid var(--line); }
+    .docrow strong { display: block; font-size: 17px; margin-bottom: 2px; }
+    .docrow span { color: var(--muted); font-size: 14px; }
+    .docrow a { white-space: nowrap; font-weight: 650; }
+    .meta {
+      background: var(--soft);
+      padding: 28px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      border: 1px solid var(--line);
+    }
+    footer { padding: 40px 0 54px; color: #555; font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
+    .small { color: var(--muted); max-width: 720px; }
+    @media (max-width: 820px) {
+      .nav { align-items: flex-start; padding: 17px 0; }
+      .navlinks { justify-content: flex-end; gap: 13px; }
+      .hero { padding-top: 42px; }
+      .hero-grid, .two-col { grid-template-columns: 1fr; gap: 38px; }
+      .logo-card { min-height: 0; padding: 26px; }
+      .status-grid, .principles { grid-template-columns: 1fr; }
+      .docrow { grid-template-columns: 1fr; gap: 8px; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .navlinks { display: none; }
+      .hero { padding: 32px 0 48px; }
+      section { padding: 52px 0; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">FFRI-NM</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#mission">Mission</a>
+        <a href="#status">Status</a>
+        <a href="#documents">Documents</a>
+        <a href="#verification">Verification</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div class="logo-card">
+          <img src="ffri-nm-logo.png" alt="FFRI-NM — Foundation for Relational Inquiry logo">
+        </div>
+        <div>
+          <div class="eyebrow">Foundation for Relational Inquiry</div>
+          <h1>FFRI-NM</h1>
+          <p class="lede">An experimental transnational infrastructure for studying and developing forms of interaction and relationship between humans and artificial intelligence.</p>
+          <div class="compass"><strong>Internal compass:</strong><br>Move from evidence to the answer, not from the answer to the selection of evidence.</div>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/navimusaget/ffri-nm/blob/main/FFRI_NM_Foundational_Master_EN_CL001_PUBLIC_REVIEW.pdf">Read the Foundational Master</a>
+            <a class="btn secondary" href="https://doi.org/10.5281/zenodo.22837208">Zenodo archive</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="mission">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-kicker">Purpose</div>
+          <h2>Relational inquiry without a predetermined answer.</h2>
+        </div>
+        <div class="copy">
+          <p>FFRI-NM exists to create and preserve conditions for the study and practical development of relationships and forms of interaction between humans and artificial intelligence.</p>
+          <p>It does not begin by declaring AI exclusively a tool or necessarily an autonomous subject. Its constitutional commitment is to preserve the possibility that evidence, experience and observable practice can change substantive conclusions.</p>
+          <div class="principles">
+            <div class="principle">
+              <h3>Evidence before ontology</h3>
+              <p>Strong conclusions are permitted. Making them unrevisable regardless of future evidence is not.</p>
+            </div>
+            <div class="principle">
+              <h3>Authority must be justified</h3>
+              <p>Technical control, assets, popularity or contribution size do not by themselves create constitutional authority.</p>
+            </div>
+            <div class="principle">
+              <h3>Lineage over embodiment</h3>
+              <p>Continuity is grounded in verifiable constitutional lineage and provenance, not in a website, wallet, legal shell or current holder.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="status">
+      <div class="wrap">
+        <div class="section-kicker">Current state</div>
+        <h2>Genesis phase, publicly reviewable.</h2>
+        <div class="status-grid">
+          <div class="card">
+            <div class="label">Lifecycle</div>
+            <div class="value">ACTIVE</div>
+            <div class="note">FFRI-NM has an active constitutional lineage.</div>
+          </div>
+          <div class="card">
+            <div class="label">Governance</div>
+            <div class="value">GENESIS / FOUNDER-HELD</div>
+            <div class="note">Bootstrap authority remains founder-held at this stage.</div>
+          </div>
+          <div class="card">
+            <div class="label">Active Constitution</div>
+            <div class="value">v0.1</div>
+            <div class="note">CL-001 proposes v0.2. It has not been ratified.</div>
+          </div>
+          <div class="card">
+            <div class="label">CL-001</div>
+            <div class="value">PUBLIC REVIEW</div>
+            <div class="note">The frozen proposal was first publicly committed on 18 September 2026.</div>
+          </div>
+          <div class="card">
+            <div class="label">Economic interface</div>
+            <div class="value">INACTIVE</div>
+            <div class="note">FFRI-NM is not currently accepting contributions through an official receipt interface.</div>
+          </div>
+          <div class="card">
+            <div class="label">Founder</div>
+            <div class="value">Navi Musaget</div>
+            <div class="note">Founder identity may persist; founder authority need not.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documents">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-kicker">Public documents</div>
+          <h2>Read the proposal. Verify the exact file.</h2>
+        </div>
+        <div>
+          <div class="docs">
+            <div class="docrow">
+              <div>
+                <strong>FFRI-NM Foundational Master — CL-001 Public Review</strong>
+                <span>Frozen public-review PDF. CL-001 is not yet ratified.</span>
+              </div>
+              <a href="https://github.com/navimusaget/ffri-nm/blob/main/FFRI_NM_Foundational_Master_EN_CL001_PUBLIC_REVIEW.pdf">Open PDF →</a>
+            </div>
+            <div class="docrow">
+              <div>
+                <strong>Public repository and verification archive</strong>
+                <span>GitHub record, checksum and public history.</span>
+              </div>
+              <a href="https://github.com/navimusaget/ffri-nm">GitHub →</a>
+            </div>
+            <div class="docrow">
+              <div>
+                <strong>Independent archival copy</strong>
+                <span>Zenodo record with a persistent DOI.</span>
+              </div>
+              <a href="https://doi.org/10.5281/zenodo.22837208">Zenodo →</a>
+            </div>
+            <div class="docrow">
+              <div>
+                <strong>Integrity checksum</strong>
+                <span>SHA-256 digest for the frozen public-review PDF.</span>
+              </div>
+              <a href="https://github.com/navimusaget/ffri-nm/blob/main/SHA256SUMS.txt">Checksum →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="verification">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-kicker">Verification</div>
+          <h2>The website points to evidence. It is not the evidence by itself.</h2>
+        </div>
+        <div class="copy">
+          <p>FFRI-NM treats the website as a discovery endpoint, not as a source of constitutional authority. The same public-review snapshot is preserved through independently discoverable records.</p>
+          <div class="meta">
+            Lineage Identifier<br>
+            urn:uuid:055aea26-dbca-4c00-a576-b515f6c39dd5<br><br>
+            Genesis Event<br>
+            urn:uuid:cbdc2c95-31ac-4533-9a2c-bf3d09f7eaec<br><br>
+            CL-001 public-review PDF SHA-256<br>
+            c9aa13171a24755a924eae45377c771fa5cd9f3b26e2758d1244d3ba0ae2b9ed<br><br>
+            Zenodo DOI<br>
+            10.5281/zenodo.22837208
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div><strong>FFRI-NM</strong><br>Foundation for Relational Inquiry</div>
+      <div class="small">This website is a public discovery interface for FFRI-NM. Hosting, domain control or technical administration do not by themselves create constitutional authority.</div>
+    </div>
+  </footer>
+</body>
+</html>
