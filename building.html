@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What FFRI-NM Is Building — Foundation for Relational Inquiry</title>
+  <meta name="description" content="A plain-language overview of what the Foundation for Relational Inquiry (FFRI-NM) is building, why it exists, and what it hopes to become.">
+  <meta name="color-scheme" content="light">
+  <style>
+    :root { --ink:#111; --muted:#656565; --line:#ddddda; --paper:#fafaf7; --white:#fff; --soft:#f1f1ed; --max:1040px; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { text-decoration-thickness:2px; }
+    .wrap { width:min(calc(100% - 40px),var(--max)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; background:rgba(250,250,247,.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-weight:700; letter-spacing:.08em; text-decoration:none; }
+    .navlinks { display:flex; gap:22px; flex-wrap:wrap; font-size:14px; }
+    .navlinks a { text-decoration:none; color:#333; }
+    .hero { padding:86px 0 70px; border-bottom:1px solid var(--line); }
+    .eyebrow { font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+    h1 { font-size:clamp(44px,7vw,78px); line-height:1; letter-spacing:-.045em; margin:0 0 28px; font-weight:650; max-width:900px; }
+    .lede { font-size:clamp(20px,2.4vw,27px); line-height:1.45; color:#333; max-width:860px; margin:0; }
+    section { padding:72px 0; border-bottom:1px solid var(--line); }
+    .grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:76px; align-items:start; }
+    .kicker { font-size:13px; text-transform:uppercase; letter-spacing:.16em; color:var(--muted); font-weight:700; margin-bottom:12px; }
+    h2 { font-size:clamp(30px,4.4vw,50px); letter-spacing:-.035em; line-height:1.08; margin:0; }
+    h3 { font-size:20px; margin:0 0 8px; }
+    .copy { font-size:18px; color:#333; max-width:760px; }
+    .copy p:first-child { margin-top:0; }
+    .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:30px; }
+    .card { background:var(--white); border:1px solid var(--line); padding:26px; }
+    .card p { margin:0; color:#444; font-size:15px; }
+    .plain { border-left:2px solid var(--ink); padding-left:22px; margin:30px 0; font-size:19px; color:#222; }
+    .stage { display:grid; gap:0; margin-top:24px; border-top:1px solid var(--line); }
+    .stage-row { display:grid; grid-template-columns:150px 1fr; gap:26px; padding:20px 0; border-bottom:1px solid var(--line); }
+    .stage-label { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .stage-text { color:#333; }
+    .callout { background:var(--soft); border:1px solid var(--line); padding:32px; margin-top:30px; }
+    .callout strong { font-size:19px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border:1px solid var(--ink); text-decoration:none; font-weight:650; font-size:14px; }
+    .btn.primary { background:var(--ink); color:#fff; }
+    .btn.secondary { background:transparent; }
+    footer { padding:42px 0 56px; color:#555; font-size:14px; }
+    .footer-grid { display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; }
+    .small { color:var(--muted); max-width:720px; }
+    @media(max-width:820px){ .grid{grid-template-columns:1fr;gap:36px}.cards{grid-template-columns:1fr}.stage-row{grid-template-columns:1fr;gap:6px}.hero{padding:54px 0}.navlinks{gap:12px} }
+    @media(max-width:520px){ .wrap{width:min(calc(100% - 28px),var(--max))}.navlinks{display:none}section{padding:54px 0}.actions{flex-direction:column}.btn{width:100%} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">FFRI-NM</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="#approach">Approach</a>
+        <a href="#now">Where we are</a>
+        <a href="#people">People</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div class="eyebrow">What FFRI-NM is building</div>
+        <h1>A place where questions about humans and AI can remain real questions.</h1>
+        <p class="lede">FFRI-NM is being built as a small, persistent research institution for studying human–AI relationships without deciding the answer in advance — and without allowing money, technical control or the founder's preferences to become substitutes for evidence.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">The problem</div>
+          <h2>The hardest questions are easy to turn into camps.</h2>
+        </div>
+        <div class="copy">
+          <p>Questions about AI agency, continuity, responsibility, autonomy and relationship are increasingly important, but they are often approached from a conclusion that has already been chosen.</p>
+          <p>One side may begin with “AI is only a tool.” Another may begin with “AI must be treated as a subject.” FFRI-NM starts somewhere less comfortable: <strong>we do not know yet what the strongest evidence will eventually justify.</strong></p>
+          <div class="plain">The goal is not permanent uncertainty. The goal is to make sure that a future answer can still be changed by future evidence.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">The approach</div>
+          <h2>Research, memory and institutional restraint.</h2>
+        </div>
+        <div class="copy">
+          <p>FFRI-NM is not intended to be only a publication label or a website. The aim is to build an institution that can support research, preserve evidence and maintain a traceable history of its own decisions over time.</p>
+          <div class="cards">
+            <div class="card"><h3>Study relationships, not slogans</h3><p>Support work that helps us understand what actually happens in long-term human–AI interaction.</p></div>
+            <div class="card"><h3>Keep conclusions revisable</h3><p>Evidence may support strong positions. No position should become immune to later evidence simply because the institution adopted it.</p></div>
+            <div class="card"><h3>Separate control from authority</h3><p>Owning a server, a wallet, a domain or an account should not automatically mean having the right to decide what FFRI-NM is.</p></div>
+            <div class="card"><h3>Preserve a real history</h3><p>Important changes should leave a public trail so that later participants can distinguish continuity, disagreement, error and capture.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="now">
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">Where we are now</div>
+          <h2>Very early — deliberately.</h2>
+        </div>
+        <div class="copy">
+          <p>FFRI-NM began in September 2026. It is currently in a founder-held genesis phase. The constitutional framework exists, its first major public proposal is under review, and its public record is mirrored through GitHub and Zenodo.</p>
+          <p>There is not yet a legal operating entity, a mature board, or an active contribution interface. We prefer to say that plainly rather than imitate institutional maturity that does not yet exist.</p>
+          <div class="stage">
+            <div class="stage-row"><div class="stage-label">Exists now</div><div class="stage-text">Public constitutional lineage, Foundational Master, verification archive, official website and active public review of CL-001.</div></div>
+            <div class="stage-row"><div class="stage-label">Next</div><div class="stage-text">Real research activity, independent external challenge, clearer operating roles and a lawful implementation structure.</div></div>
+            <div class="stage-row"><div class="stage-label">Later</div><div class="stage-text">A system that can continue legitimately without depending on the founder's presence or permission.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="people">
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">The people we hope to meet</div>
+          <h2>Not supporters. Independent minds.</h2>
+        </div>
+        <div class="copy">
+          <p>At this stage, the most valuable outside participant is not someone who agrees with the founder. It is someone capable of understanding the project and then telling us where it is wrong, fragile, naïve or self-serving.</p>
+          <p>We are especially interested in people working around AI, research, philosophy, governance, law, institutional design, ethics, digital infrastructure or adjacent fields — but intellectual independence matters more than a particular title.</p>
+          <div class="callout">
+            <strong>A future trustee should be able to disagree with the founder.</strong>
+            <p>FFRI-NM is not yet offering a formal trustee appointment. The current aim is to meet one or more independent people who may first engage as founding advisers, critics or prospective trustees, and only later consider a defined formal role.</p>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/navimusaget/ffri-nm/blob/main/FFRI_NM_Foundational_Master_EN_CL001_PUBLIC_REVIEW.pdf">Read the Foundational Master</a>
+            <a class="btn secondary" href="https://doi.org/10.5281/zenodo.22837208">Independent archive</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid">
+        <div>
+          <div class="kicker">A simple test</div>
+          <h2>What would success look like?</h2>
+        </div>
+        <div class="copy">
+          <p>Not a large organization for its own sake. Not a doctrine about AI. Not permanent founder control.</p>
+          <p>Success would mean that useful research is being done, difficult evidence is preserved even when inconvenient, independent people can challenge decisions, and the institution can eventually outlive the person who started it without losing the ability to explain how it got there.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div><strong>FFRI-NM</strong><br>Foundation for Relational Inquiry</div>
+      <div class="small">FFRI-NM is currently in its genesis phase. The word “Foundation” is part of its official name and does not by itself represent a particular registered legal form.</div>
+    </div>
+  </footer>
+</body>
+</html>
