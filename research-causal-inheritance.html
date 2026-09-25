@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When Experience Survives the Agent | FFRI-NM</title>
+  <meta name="description" content="Navi Musaget's methodological position paper on causal operational inheritance (COI), published in association with FFRI-NM.">
+  <link rel="canonical" href="https://ffri.navimusaget.com/research-causal-inheritance.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#fafaf7">
+  <meta name="color-scheme" content="light">
+  <meta property="og:site_name" content="FFRI-NM">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="When Experience Survives the Agent">
+  <meta property="og:description" content="Testing Causal Operational Inheritance Across Successor Replacement — a methodological position paper with a controlled proof-of-concept.">
+  <meta property="og:url" content="https://ffri.navimusaget.com/research-causal-inheritance.html">
+  <meta property="og:image" content="https://ffri.navimusaget.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When Experience Survives the Agent">
+  <meta name="twitter:description" content="Testing Causal Operational Inheritance Across Successor Replacement.">
+  <meta name="twitter:image" content="https://ffri.navimusaget.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"When Experience Survives the Agent: Testing Causal Operational Inheritance Across Successor Replacement",
+    "headline":"When Experience Survives the Agent",
+    "author":{"@type":"Person","name":"Navi Musaget","url":"https://navimusaget.com/"},
+    "datePublished":"2026-09-25",
+    "inLanguage":"en",
+    "identifier":"https://doi.org/10.5281/zenodo.22968201",
+    "url":"https://ffri.navimusaget.com/research-causal-inheritance.html",
+    "description":"Methodological position paper with a controlled proof-of-concept, published in association with the Foundation for Relational Inquiry (FFRI-NM).",
+    "isPartOf":{"@type":"Organization","name":"Foundation for Relational Inquiry","alternateName":"FFRI-NM","url":"https://ffri.navimusaget.com/"}
+  }
+  </script>
+  <style>
+    :root{--ink:#111;--muted:#656565;--line:#ddddda;--paper:#fafaf7;--white:#fff;--soft:#f1f1ed;--max:1040px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(250,250,247,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:700;letter-spacing:.08em;text-decoration:none}
+    .navlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}.navlinks a{text-decoration:none;color:#333}
+    .hero{padding:82px 0 68px;border-bottom:1px solid var(--line)}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+    h1{font-size:clamp(42px,6.5vw,72px);line-height:1.02;letter-spacing:-.045em;margin:0 0 24px;font-weight:650;max-width:980px}
+    .subtitle{font-size:clamp(20px,2.4vw,27px);line-height:1.42;color:#333;max-width:900px;margin:0 0 26px}
+    .meta-line{color:var(--muted);font-size:14px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--ink);text-decoration:none;font-weight:650;font-size:14px}.btn.primary{background:var(--ink);color:#fff}
+    section{padding:68px 0;border-bottom:1px solid var(--line)}.grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:76px;align-items:start}
+    .kicker{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-weight:700;margin-bottom:12px}
+    h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.035em;line-height:1.08;margin:0}.copy{font-size:18px;color:#333;max-width:760px}.copy p:first-child{margin-top:0}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.card{background:var(--white);border:1px solid var(--line);padding:22px}
+    .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:7px}.value{font-size:17px;font-weight:650;line-height:1.35}
+    .note{background:var(--soft);border:1px solid var(--line);padding:26px;margin-top:28px;color:#333}
+    .records{display:grid;gap:0;border-top:1px solid var(--line);margin-top:28px}.record{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+    .record strong{display:block;font-size:17px}.record span{color:var(--muted);font-size:14px}.record a{white-space:nowrap;font-weight:650}
+    footer{padding:42px 0 56px;color:#555;font-size:14px}.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.small{color:var(--muted);max-width:720px}
+    .mobile-menu{display:none;position:relative}.mobile-menu summary{list-style:none;cursor:pointer;font-size:14px;font-weight:650;padding:8px 0 8px 12px;user-select:none}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu summary::after{content:" +";font-weight:400}.mobile-menu[open] summary::after{content:" −"}
+    .mobile-menu-panel{position:absolute;right:0;top:calc(100% + 10px);min-width:230px;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.08);padding:8px;z-index:50}.mobile-menu-panel a{display:block;padding:11px 12px;text-decoration:none;font-size:14px;color:#222}
+    @media(max-width:820px){.grid{grid-template-columns:1fr;gap:36px}.hero{padding:54px 0}.facts{grid-template-columns:1fr}.navlinks{gap:12px}}
+    @media(max-width:520px){.wrap{width:min(calc(100% - 28px),var(--max))}.navlinks{display:none}.mobile-menu{display:block}.hero{padding:44px 0}section{padding:54px 0}.actions{flex-direction:column}.btn{width:100%}.record{grid-template-columns:1fr;gap:8px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="index.html">FFRI-NM</a>
+  <nav class="navlinks" aria-label="Primary navigation">
+    <a href="index.html">Home</a><a href="building.html">What we're building</a><a href="#coi6">COI-6</a><a href="#result">Result</a><a href="#limits">Limits</a><a href="#record">Public record</a><a href="#inquiry">Open inquiry</a>
+  </nav>
+  <details class="mobile-menu"><summary aria-label="Open navigation menu">Menu</summary><nav class="mobile-menu-panel" aria-label="Mobile navigation">
+    <a href="index.html">Home</a><a href="building.html">What we're building</a><a href="research-01.html">Project 01</a><a href="#result">Result</a><a href="#record">Public record</a><a href="#inquiry">Open inquiry</a><a href="contact.html">Contact</a>
+  </nav></details>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Independent Research · Published in association with FFRI-NM</div>
+  <h1>When Experience Survives the Agent</h1>
+  <p class="subtitle">Testing Causal Operational Inheritance Across Successor Replacement</p>
+  <div class="meta-line">Navi Musaget · Independent Researcher · Methodological position paper with a controlled proof-of-concept · Published 25 September 2026</div>
+  <div class="actions"><a class="btn primary" href="https://doi.org/10.5281/zenodo.22968201">Open the research record →</a></div>
+</div></div>
+
+<section><div class="wrap grid">
+  <div><div class="kicker">The question</div><h2>When does persistence become causal inheritance?</h2></div>
+  <div class="copy">
+    <p>Long-lived artificial agents can preserve facts, trajectories, procedures and other forms of memory across sessions and model boundaries. Persistence alone, however, does not establish that a predecessor's experience remains causally operative in a successor.</p>
+    <p>This paper introduces <strong>causal operational inheritance (COI)</strong> as an interventionally testable predecessor–successor relation: the inherited object must be operational, its formation must depend on predecessor experience, its effect must survive removal of that experience and replacement of the active carrier, and the proposed mediator must withstand causal intervention.</p>
+  </div>
+</div></section>
+
+<section id="coi6"><div class="wrap grid">
+  <div><div class="kicker">COI-6</div><h2>A six-part evidentiary assay.</h2></div>
+  <div class="copy">
+    <p>The proposed COI-6 criterion requires six steps: experience intervention, transportable-state mutation, origin removal, fresh-carrier instantiation, counterfactual successor divergence, and mediator intervention.</p>
+    <div class="facts">
+      <div class="card"><div class="label">1–2</div><div class="value">Experience intervention · State mutation</div></div>
+      <div class="card"><div class="label">3–4</div><div class="value">Origin removal · Fresh-carrier instantiation</div></div>
+      <div class="card"><div class="label">5</div><div class="value">Counterfactual successor divergence</div></div>
+      <div class="card"><div class="label">6</div><div class="value">Mediator intervention</div></div>
+    </div>
+    <div class="note">Passing COI-6 does not establish consciousness, personal identity, subjective continuity or autonomous development. It tests a narrower causal-inheritance claim.</div>
+  </div>
+</div></section>
+
+<section id="result"><div class="wrap grid">
+  <div><div class="kicker">Controlled proof-of-concept</div><h2>The positive result is deliberately narrow.</h2></div>
+  <div class="copy">
+    <p>In PLI-2G, corrective experience produced a token-specific operational mapping. After the originating history was removed, fresh carriers followed that mapping across all three synthetic domains tested.</p>
+    <p>PLI-2G-M then targeted the proposed mediator. Mapping-only transplant reproduced the effect in 3/3 domains; mapping ablation removed it despite retained semantic residue in 3/3; and wrong-token sham mappings produced no effect in 3/3. Within this engineered representation, <strong>SELECTOR_MAP</strong> was necessary and sufficient for the tested token-specific effect.</p>
+    <div class="note"><strong>What this demonstrates:</strong> an engineered experience-produced operational mediator can remain causally effective after origin removal and fresh-carrier replacement, and its local effect can be tested by transplant, ablation and sham intervention.</div>
+  </div>
+</div></section>
+
+<section id="limits"><div class="wrap grid">
+  <div><div class="kicker">Where the claim stops</div><h2>Negative controls define the boundary.</h2></div>
+  <div class="copy">
+    <p>PLI-2H did not pass as a discriminating test of less-prestructured significance selection: both H0 and ablation validity controls reproduced the H1 forced-choice pattern. The paper therefore withholds the stronger interpretation.</p>
+    <p>The proof-of-concept is local to one engineered updater and state representation, fresh sessions within one tested model environment, three synthetic domains and deterministic-style forced-choice tasks. It does not establish cross-model or cross-provider robustness, autonomous significance selection, general developmental continuity, consciousness, personhood or identity persistence.</p>
+    <div class="note">The reported 3/3 contrasts are exact proof-of-concept outcomes, not population estimates. Two reveal-before-hash deviations are preserved as procedural limitations rather than retrospectively repaired.</div>
+  </div>
+</div></section>
+
+<section id="record"><div class="wrap grid">
+  <div><div class="kicker">Public record</div><h2>Read the paper and inspect its evidentiary boundary.</h2></div>
+  <div class="copy">
+    <p>The publication records both positive and failed experiments because the negative results define which stronger interpretations the present evidence does not support.</p>
+    <div class="records">
+      <div class="record"><div><strong>Zenodo research record</strong><span>Published 25 September 2026.</span></div><a href="https://doi.org/10.5281/zenodo.22968201">Open →</a></div>
+      <div class="record"><div><strong>DOI</strong><span>10.5281/zenodo.22968201</span></div><a href="https://doi.org/10.5281/zenodo.22968201">Resolve →</a></div>
+      <div class="record"><div><strong>Institutional relationship</strong><span>Published in association with FFRI-NM. The author retains sole responsibility for the study design, analysis and claims.</span></div><a href="index.html">FFRI-NM →</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="inquiry"><div class="wrap grid">
+  <div><div class="kicker">Open inquiry</div><h2>Replication should be a new test, not a repair.</h2></div>
+  <div class="copy">
+    <p>The paper identifies two next directions: a prospectively frozen replication with repeated stochastic runs, an independently implemented updater and additional model/provider environments; and a separate significance-selection assay that manipulates the lineage-level criterion of relevance itself.</p>
+    <p>Criticism, replication designs and alternative implementations are welcome when they make the evidentiary claim more testable rather than broader by assertion.</p>
+    <div class="actions"><a class="btn primary" href="mailto:navimusaget@gmail.com?subject=FFRI-NM%20%7C%20Causal%20Operational%20Inheritance">Discuss or challenge the work →</a><a class="btn" href="contact.html">Contact FFRI-NM →</a></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap footer-grid"><div><strong>FFRI-NM</strong><br>Foundation for Relational Inquiry</div><div class="small">This work was published in association with FFRI-NM. Navi Musaget retains sole responsibility for the study design, analysis and claims.</div></div></footer>
+</body>
+</html>
